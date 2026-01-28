@@ -8,7 +8,10 @@
  */
 int thirdBits(void)
 {
-    return 2;
+    int one_byte = 0x49;
+    int two_bytes = one_byte << 9 | one_byte;
+    int four_bytes = two_bytes << 18 | two_bytes;
+    return four_bytes;
 }
 
 int test_thirdBits(void)

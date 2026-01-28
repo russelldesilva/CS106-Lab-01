@@ -9,7 +9,7 @@
  */
 int bitNor(int x, int y)
 {
-    return 2;
+    return ~x & ~y;
 }
 
 int test_bitNor(int x, int y)
@@ -19,8 +19,8 @@ int test_bitNor(int x, int y)
 
 int main(void)
 {
-    int x = 0;
-    int y = 0;
+    int x = 0xffffffff;
+    int y = 0xffffffff;
     printf("expected: %x\n", bitNor(x, y));
     printf("actual  : %x\n", test_bitNor(x, y));
 }
